@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import FormPersonalDetails from './FormPersonalDetails'
 import FormSummary from './FormSummary'
 import FormExperience from './FormExperience'
+import FormEducation from './FormEducation'
 
 function FormSection() {
   const [formIndex, setFormIndex] = useState(1)
@@ -25,6 +26,8 @@ function FormSection() {
         {formIndex == 2 && <FormSummary enabledNext={(v)=>setEnabledNext(v)}/>}
 
         {formIndex == 3 && <FormExperience enabledNext={(v)=>setEnabledNext(v)}/>}
+
+        {formIndex == 4 && <FormEducation enabledNext={(v)=>setEnabledNext(v)}/>}
 
       </div>
     </div>

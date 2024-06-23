@@ -139,7 +139,7 @@ function FormExperience({ enabledNext }) {
                   />
                 </div>
                 <div className="col-span-2">
-                  <RichTextEditor onTextEditorChange={(event) => handleEditorChange(event, 'workSummary', index)} />
+                  <RichTextEditor onTextEditorChange={(event) => handleEditorChange(event, 'workSummary', index)} index={index} />
                 </div>
               </div>
             </div>

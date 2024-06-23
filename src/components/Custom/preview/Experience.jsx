@@ -2,8 +2,7 @@ import { ResumeInfo } from "@/Context/ResumeInfoContext";
 import React, { useContext } from "react";
 
 function Experience() {
-
-  const {formData} = useContext(ResumeInfo);
+  const { formData } = useContext(ResumeInfo);
   return (
     <div className="my-4">
       <h2
@@ -22,12 +21,14 @@ function Experience() {
           <h2 className="flex justify-between text-xs">
             {experience?.companyName}, {experience?.city}, {experience?.state}
             <span>
-              {experience?.startDate} -{" "}
+              {experience?.startDate} To{" "}
               {experience?.currentlyWorking ? "Present" : experience?.endDate}
             </span>
           </h2>
-          {/* <p className="text-xs my-2">{experience?.workSummary}</p> */}
-          <div dangerouslySetInnerHTML={{__html:experience?.workSummary}}/>
+          <div
+            className="text-xs my-2"
+            dangerouslySetInnerHTML={{ __html: experience?.workSummary }}
+          />
         </div>
       ))}
     </div>
