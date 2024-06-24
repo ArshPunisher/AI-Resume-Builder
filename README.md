@@ -8,3 +8,6 @@ AUTHENTICATION
 
 DASHBOARD
 ![Screenshot 2024-06-24 151826](https://github.com/ArshPunisher/AI-Resume-Builder/assets/86513926/c6920437-5d4b-4c95-a62e-49b33a325b8f)
+
+RESUME
+![Screenshot 2024-06-24 151852](https://github.com/ArshPunisher/AI-Resume-Builder/assets/86513926/634b64a1-00d3-4d6f-bea1-8fd3cd5aa1e0)
