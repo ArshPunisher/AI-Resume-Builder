@@ -1,8 +1,10 @@
-# React + Vite
+AI RESUME BUILDER (LIVE ON) https://ai-resume-builder-23eb4.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LANDING PAGE
+![Screenshot 2024-06-24 151747](https://github.com/ArshPunisher/AI-Resume-Builder/assets/86513926/6700cb19-5648-4888-9aa6-4244db9c0b66)
 
-Currently, two official plugins are available:
+AUTHENTICATION
+![Screenshot 2024-06-24 151802](https://github.com/ArshPunisher/AI-Resume-Builder/assets/86513926/b04a7568-ced2-4219-b434-c8c56408fc03)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+DASHBOARD
+![Screenshot 2024-06-24 151826](https://github.com/ArshPunisher/AI-Resume-Builder/assets/86513926/c6920437-5d4b-4c95-a62e-49b33a325b8f)
