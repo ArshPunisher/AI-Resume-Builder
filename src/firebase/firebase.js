@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBbHKwSrZM-MWACea9CbyMhyNBlQ6xfHPM",
-    authDomain: "ai-resume-builder-2dfcc.firebaseapp.com",
-    projectId: "ai-resume-builder-2dfcc",
-    storageBucket: "ai-resume-builder-2dfcc.appspot.com",
-    messagingSenderId: "561356865596",
-    appId: "1:561356865596:web:7d56b82fca54e700388339"
-  };
+  apiKey: "AIzaSyAA4TWk8qDJ-AjyHPEFc82wbVUQWE11y0M",
+  authDomain: "ai-resume-builder-23eb4.firebaseapp.com",
+  projectId: "ai-resume-builder-23eb4",
+  storageBucket: "ai-resume-builder-23eb4.appspot.com",
+  messagingSenderId: "906245144511",
+  appId: "1:906245144511:web:21f78399d455906af36b0a"
+};
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);

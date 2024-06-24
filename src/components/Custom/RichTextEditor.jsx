@@ -73,7 +73,9 @@ function RichTextEditor({ onTextEditorChange, index }) {
   };
 
   useEffect(()=>{
-    setValue(formData?.experience[index]?.workSummary)
+    if (formData.experience && formData.experience.length > 0) {
+      setValue(formData.experience[index]?.workSummary);
+    }
   },[])
   
 
