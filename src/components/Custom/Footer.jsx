@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/Obsidian.svg'
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-400 py-12">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h3 className="text-white text-lg mb-4">Logo</h3>
+          <h3 className="flex gap-2 items-center text-white text-lg font-bold mb-4"><img src={logo} alt="" className='h-10 w-10'/> AI Resume</h3>
           <p className="text-sm">
-            The proper Footer on proper time can preserve you protection. We assist you make sure everybody forward.
+          Experience the future of resume building with our AI technology. Start shaping your career with confidence.
           </p>
           <div className="flex space-x-4 mt-4">
             <a href="https://www.linkedin.com/in/arsh-ramgarhia/" target='blank'  className="text-gray-400 hover:text-white">
@@ -19,9 +20,6 @@ const Footer = () => {
             </a>
             <a href="https://www.instagram.com/iarshramgarhia/" target='blank' className="text-gray-400 hover:text-white">
               <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-youtube"></i>
             </a>
           </div>
         </div>

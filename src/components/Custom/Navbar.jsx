@@ -5,7 +5,7 @@ import logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom';
 
 function Navbar({ scrolled, notScrolled}) {
-    const { user, isSignedIn } = useUser();
+    const { isSignedIn } = useUser();
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(()=>{

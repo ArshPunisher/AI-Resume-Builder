@@ -25,6 +25,7 @@ function FormExperience({ enabledNext }) {
   const [experienceList, setExperiencedList] = useState([{ ...formField }]);
 
   const handleChange = (index, e) => {
+    enabledNext(false)
     const newEnteries = experienceList.slice();
     const { name, value } = e.target;
     newEnteries[index][name] = value;
@@ -40,6 +41,7 @@ function FormExperience({ enabledNext }) {
   };
 
   const handleEditorChange = (e, name, index) => {
+    enabledNext(false)
     const newEnteries = experienceList.slice();
     newEnteries[index][name] = e.target.value;
     setExperiencedList(newEnteries);
@@ -65,6 +67,12 @@ function FormExperience({ enabledNext }) {
       setLoading(false);
     }
   };
+
+  useEffect(()=>{
+    if (formData.experience && formData.experience.length > 0) {
+      setExperiencedList(formData.experience);
+    }
+  },[])
 
   useEffect(() => {
     setFormData({

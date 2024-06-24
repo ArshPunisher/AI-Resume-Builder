@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   BtnBold,
   BtnBulletList,
@@ -19,10 +19,24 @@ import { toast } from "../ui/use-toast";
 import { chatSession } from "@/Service/gemeniApi";
 
 
-const prompt = "position title: {positionTitle}, Depends on position title give me 5-7 bullet points for my experience in resume, give me result in HTML format"
+const prompt = `
+position title: {positionTitle}
+Based on the above position title, provide 5-7 bullet points for job experience that can be included in a resume. Each bullet point should be a concise, impactful statement. Please provide the result in JSON format as follows:
+{
+  "experience": [
+    {"summary": "First bullet point"},
+    {"summary": "Second bullet point"},
+    {"summary": "Third bullet point"},
+    {"summary": "Fourth bullet point"},
+    {"summary": "Fifth bullet point"},
+    {"summary": "Sixth bullet point"},
+    {"summary": "Seventh bullet point"}
+  ]
+}
+`;
 
 function RichTextEditor({ onTextEditorChange, index }) {
-  const { formData, setFormData } = useContext(ResumeInfo);
+  const { formData } = useContext(ResumeInfo);
   const [loading, setLoading] = useState(false)
   const [value, setValue] = useState();
 
@@ -44,11 +58,11 @@ function RichTextEditor({ onTextEditorChange, index }) {
       const responseText = await result.response.text();
       console.log("responseText", responseText);
       const parsedResult = JSON.parse(responseText);
+      console.log("Parse result", parsedResult);
       
       // Join the experience array into a single HTML string
-      const experienceHTML = `<ul>${parsedResult.experience.map(point => `<li>${point}</li>`).join('')}</ul>`;
+      const experienceHTML = `<ul>${parsedResult.experience.map(point => `<li>${point.summary}</li>`).join('')}</ul>`;
       
-      console.log("Parse result", parsedResult);
       setValue(experienceHTML);
     } catch (error) {
       console.error("Error", error.message);
@@ -57,6 +71,10 @@ function RichTextEditor({ onTextEditorChange, index }) {
       setLoading(false);
     }
   };
+
+  useEffect(()=>{
+    setValue(formData?.experience[index]?.workSummary)
+  },[])
   
 
   return (

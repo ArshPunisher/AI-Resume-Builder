@@ -43,6 +43,7 @@ function FormEducation({ enabledNext }) {
   };
 
   const handleChange = (index, e) => {
+    enabledNext(false)
     const { name, value } = e.target;
     const newEducationList = [...educationList];
     newEducationList[index][name] = value;
@@ -69,6 +70,13 @@ function FormEducation({ enabledNext }) {
       setLoading(false);
     }
   };
+  
+
+  useEffect(()=>{
+    if (formData.education && formData.education.length > 0) {
+      setEducationList(formData.education);
+    }
+  },[])
 
   useEffect(()=>{
     setFormData({
